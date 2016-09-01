@@ -1,0 +1,87 @@
+// Give the navigation some padding
+.nav {
+  margin: 10px 0;
+  
+  // Style the active links
+  a.active {
+    font-weight: bold;
+  }
+}
+
+#navBar{
+  display: none;
+}
+
+.navbar-nav{
+  height: auto;
+}
+
+.listSearch{
+  padding:10px;
+  background-color: #F2F2F2;
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+.labelSearchDetails{
+  text-align: center;
+  height: 40px;
+}
+
+.searchDetailsVal{
+  text-align: center;
+}
+
+.labelSearchMore{
+  text-align: right;
+  margin-top: 32px;
+  height: 30px;
+  color: #04B404;
+}
+
+.searchMore{
+  text-align: right;
+  height: 50%;
+  margin-top: 40px;
+}
+
+.pathWrap{
+  word-wrap: break-word;
+}
+
+.searchButton {
+    width: 115px;
+    height: 37px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #FFF!important;
+    background-color: #272628!important;
+    border-radius: 0;
+}
+
+
+@media (max-width: 991px) {
+  .searchDetailsVal{
+    text-align: right;
+  }
+  .labelSearchDetails{
+    height: auto;
+    text-align: left;
+  }
+  .searchButton{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    height: 50%;
+    width: 100%;
+  }
+  .labelSearchMore{
+    text-align: center;
+  }
+  .searchEl{
+    margin-top: 10px;
+  }
+  .loanTitle{
+    margin-bottom: 10px;
+  }
+}

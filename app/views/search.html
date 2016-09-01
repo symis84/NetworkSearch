@@ -1,0 +1,49 @@
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            {{msg}}
+        </div>
+    </div>
+        	
+    <div class="row">
+        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <li ng-repeat="network in networkSearches" class="listSearch">
+                <div class="row">
+                    <div class="col-lg-10 col-md-10 col-sm-9 col-xs-12">
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 searchEl">
+                            <span class="col-lg-12 col-md-12 col-sm-6 col-xs-6 labelSearchDetails">Count:</span>
+                            <span class="col-lg-12 col-md-12 col-sm-6 col-xs-6 searchDetailsVal">{{network.Count}}</span>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 searchEl">
+                            <span class="col-lg-12 col-md-12 col-sm-6 col-xs-6 labelSearchDetails">Description:</span>
+                            <span class="col-lg-12 col-md-12 col-sm-6 col-xs-6 searchDetailsVal">{{network.Description}}</span>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 searchEl">
+                            <span class="col-lg-12 col-md-12 col-sm-6 col-xs-6 labelSearchDetails">Finished:</span>
+                            <span class="col-lg-12 col-md-12 col-sm-6 col-xs-6 searchDetailsVal">{{network.FinishedAt}}</span>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 searchEl">
+                            <span class="col-lg-12 col-md-12 col-sm-6 col-xs-6 labelSearchDetails">Name:</span>
+                            <span class="col-lg-12 col-md-12 col-sm-6 col-xs-6 searchDetailsVal">{{network.Name}}</span>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 searchEl">
+                            <span class="col-lg-12 col-md-12 col-sm-6 col-xs-6 labelSearchDetails">Requested:</span>
+                            <span class="col-lg-12 col-md-12 col-sm-6 col-xs-6 searchDetailsVal">{{network.RequestedAt}}</span>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 searchEl">
+                            <span class="col-lg-12 col-md-12 col-sm-6 col-xs-6 labelSearchDetails">Requester:</span>
+                            <span class="col-lg-12 col-md-12 col-sm-6 col-xs-6 searchDetailsVal">{{network.Requester}}</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                        <div class="searchMore">
+                            <a class="btn btn-sm searchButton" ng-click="openResults($index)" tabindex="0">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+

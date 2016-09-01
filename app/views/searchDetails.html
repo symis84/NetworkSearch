@@ -1,0 +1,77 @@
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+    <form class="form-inline">
+      <div class="form-group">
+        <label for="inputPath">Search by Path:</label>
+        <input type="text" class="form-control" id="inputPath" ng-model="pathFile">
+        <label for="inputPath">Search by Size:</label>
+        <input type="text" class="form-control" id="inputPath" ng-model="fileSizeMin" placeholder='min value'>
+        <input type="text" class="form-control" id="inputPath" ng-model="fileSizeMax" placeholder='max value'>
+        <label for="inputPath">Search by Date:</label>
+        <div class="input-group">
+          <input type="text" class="form-control" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="dateMin" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="false" close-text="Close" alt-input-formats="altInputFormats" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </div>
+        <div class="input-group">
+          <input type="text" class="form-control" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="dateMax" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="false" close-text="Close" alt-input-formats="altInputFormats" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="filterNetworkResults()">Filter</button>
+      </div>
+    </form>
+
+
+    <ul class="pagination">
+        <li class="ng-scope"><a ng-click="selectItemsPerPage(10)" class="ng-binding">10</a></li>
+        <li class="ng-scope"><a ng-click="selectItemsPerPage(20)" class="ng-binding">20</a></li>
+        <li class="ng-scope"><a ng-click="selectItemsPerPage(30)" class="ng-binding">30</a></li>
+    </ul>
+    <ul uib-pagination ng-model="currentPage" total-items="totalItems" items-per-page='itemsPerPage' direction-links='false' num-pages='numPages'></ul>
+    <ul class="pagination">
+        <li class="ng-scope"><a ng-click="setPage(-1)" class="ng-binding">last page</a></li>
+    </ul>
+        	
+    <div class="row">
+        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <li ng-repeat="network in pagedItems" class="listSearch">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 searchEl">
+                            <span class="col-lg-12 col-md-12 col-sm-6 col-xs-6 labelSearchDetails">Created:</span>
+                            <span class="col-lg-12 col-md-12 col-sm-6 col-xs-6 searchDetailsVal">{{network.Created}}</span>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 searchEl">
+                            <span class="col-lg-12 col-md-12 col-sm-6 col-xs-6 labelSearchDetails">Last Accessed:</span>
+                            <span class="col-lg-12 col-md-12 col-sm-6 col-xs-6 searchDetailsVal">{{network.LastAccessed}}</span>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 searchEl">
+                            <span class="col-lg-12 col-md-12 col-sm-6 col-xs-6 labelSearchDetails">Last Modified:</span>
+                            <span class="col-lg-12 col-md-12 col-sm-6 col-xs-6 lsearchDetailsVal">{{network.LastModified}}</span>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 searchEl">
+                            <span class="col-lg-12 col-md-12 col-sm-6 col-xs-6 labelSearchDetails">Path:</span>
+                            <span class="col-lg-12 col-md-12 col-sm-6 col-xs-6 searchDetailsVal pathWrap">{{network.Path}}</span>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 searchEl">
+                            <span class="col-lg-12 col-md-12 col-sm-6 col-xs-6 labelSearchDetails">Size:</span>
+                            <span class="col-lg-12 col-md-12 col-sm-6 col-xs-6 loanDetailsVal">{{network.Size}}</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+
+    
+
+
+
+</div>
+
+
